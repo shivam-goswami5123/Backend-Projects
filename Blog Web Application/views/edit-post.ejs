@@ -1,0 +1,9 @@
+<%- include("partials/header.ejs") %>
+<main>
+    <h1>Edit Post</h1>
+    <form action="/edit/<%= postId %>"  method="POST">
+        <textarea id="workspace" name="workspace"><%= post %></textarea>
+        <input class="btn" type="submit" value="Submit">
+    </form>
+</main>
+<%- include("partials/footer.ejs") %>

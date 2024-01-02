@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+<main>
+        <div class="posts-area">
+            <p id="posts-area-title">Recent Posts</p>
+            <% if(locals.count!=0) {
+                for(let key in posts){ %>
+                    <div class="recent-post">
+                            <%=posts[key]%>
+                            <div class="control-btn">
+                                <button class="btn"><a href="/edit/<%=key%>">Edit</a></button>
+                                <form action="/delete/<%=key%>" method="POST">
+                                    <input class="btn" type="submit" value="Delete">
+                                </form>
+                            </div>
+                    </div>
+                <% }
+            } 
+            else{ %>
+                <p>Nothing to show ... Add some posts from workspace</p>
+            <% } %>
+            </div>
+        </div>
+        <button class="btn"><a href="/create">Create Post</a></button>
+    </main>
+<%- include("partials/footer.ejs") %>

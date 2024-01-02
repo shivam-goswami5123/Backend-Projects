@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+<main>
+    <h1>Create Post</h1>
+    <div class="work-area">
+        <form action="/create" method="POST">
+            <p id="work-area-title">WorkSpace</p>
+            <textarea id="workspace" name="workspace"></textarea>
+            <br>
+            <input class="btn" type="submit" value="Add Post">
+        </form>
+    </div>
+</main>
+<%- include("partials/footer.ejs") %>

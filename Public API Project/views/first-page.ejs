@@ -1,0 +1,47 @@
+<%- include("partials/header.ejs") %>
+<body>
+  
+    <% if(locals.content){ %>
+        <div class="card" style="width: 18rem;">
+            <img src=<%=content.strDrinkThumb%> class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"> <%=content.strDrink%> </h5>
+              <p class="card-text"> <%=content.strInstructions%> </p>
+              <hr>
+              <a href="/random" class="btn btn-primary">Get Random Drink</a>
+              <hr>
+              <form action="/specific-drink" method="POST">
+                <label class="mx-2" for="dname">Drink Name:</label>
+                <input type="text" id="dname" name="dname">
+                <input class="btn btn-primary my-2" type="submit" value="Get Specific Drink">
+              </form> 
+              <hr>
+              <a href="/list-page" class="btn btn-primary">List Page</a> 
+            </div>
+          </div>
+  
+    <% }
+    else{ %>
+  
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="No Image">
+            <div class="card-body">
+              <h5 class="card-title"> Nothing to show</h5>
+              <p class="card-text"> Nothing to show </p>
+              <a href="/random" class="btn btn-primary">Get Random Drink</a>
+              <hr>
+              <form action="/specific-drink" method="POST">
+                <label  for="dname">Drink Name:</label>
+                <input type="text" id="dname" name="dname">
+                <input class="btn btn-primary my-2" type="submit" value="Get Specific Drink">
+              </form> 
+              <hr>
+              <a href="/list-page" class="btn btn-primary">List Page</a>
+            </div>
+          </div>
+  
+    <% }%>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

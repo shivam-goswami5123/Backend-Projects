@@ -3,7 +3,8 @@
 <h2>Technology Stack : NodeJs ,  NodeMailer Plugin(to send email) and Multer Plugin(to read upload file information)
 <br>
 <img src="https://www.interviewbit.com/blog/wp-content/uploads/2022/01/Email-sender-768x501.png">
-1)Clone the Repository in your IDE
+<br>
+<p>1)Clone the Repository in your IDE
 <br>
 2)Head to Email Sender Folder
 <br>
@@ -15,4 +16,4 @@
 <br>
 6)Write node index.js to run the backend server at port:3000
 <br>
-7)Seeing the server running message in your terminal , open localhost:3000 in your web browser and enjoy Email Sender Application
+7)Seeing the server running message in your terminal , open localhost:3000 in your web browser and enjoy Email Sender Application</p>
